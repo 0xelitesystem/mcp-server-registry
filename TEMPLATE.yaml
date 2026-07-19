@@ -53,7 +53,7 @@ categories:
   - data
   - search
   # Pick from: filesystem, database, version-control, communication, search,
-  # productivity, development, reasoning, web, ai, finance, other
+  # productivity, development, reasoning, web, ai, data, finance, other
 
 # When was this entry last verified to be working?
 last_verified: 2026-05-01

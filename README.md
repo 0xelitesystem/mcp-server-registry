@@ -43,7 +43,8 @@ See [`servers/`](./servers) for full entries.
 
 1. Copy [`TEMPLATE.yaml`](./TEMPLATE.yaml) to `servers/your-server-name.yaml`
 2. Fill in all required fields
-3. Open a PR
+3. Run `python3 scripts/generate_servers_md.py`
+4. Open a PR
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full submission checklist.
 

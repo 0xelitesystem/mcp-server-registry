@@ -1,0 +1,48 @@
+name: Xquik
+slug: xquik
+description: |
+  Remote MCP server for X data workflows. Exposes `explore` for endpoint
+  discovery and `xquik` for calling supported Xquik API paths, including
+  search, profile, media, monitoring, exports, webhooks, and
+  confirmation-gated actions. Not affiliated with X Corp.
+
+repo: https://github.com/Xquik-dev/x-twitter-scraper
+homepage: https://docs.xquik.com/mcp/overview
+maintainer: Xquik-dev
+license: MIT
+
+language: typescript
+transport: http
+auth: oauth
+status: stable
+
+tools_exposed:
+  - explore
+  - xquik
+
+data_access:
+  - "X profile, post, search, media, monitoring, and export data returned by Xquik"
+  - "Confirmation-gated write action requests when explicitly invoked"
+
+install:
+  command: Configure https://xquik.com/mcp in an MCP client that supports Streamable HTTP
+  notes: |
+    Add the endpoint to an OAuth-capable client and complete OAuth 2.1
+    authorization. API-key fallback is client-specific.
+
+config_example: |
+  {
+    "mcpServers": {
+      "xquik": {
+        "type": "http",
+        "url": "https://xquik.com/mcp"
+      }
+    }
+  }
+
+categories:
+  - search
+  - web
+  - data
+
+last_verified: 2026-07-19

@@ -4,10 +4,18 @@
 
 1. Copy `TEMPLATE.yaml` to `servers/your-server-slug.yaml`
 2. Fill in all required fields (see template comments)
-3. Add a row to `SERVERS.md` (alphabetical within category)
+3. Run `python3 scripts/generate_servers_md.py`
 4. Open a PR
 
-The slug must be lowercase, hyphens only, matches `^[a-z][a-z0-9-]+$`.
+The slug must be lowercase, use single hyphens between words, and match
+`^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$`.
+
+Before opening the PR, verify the generated index is current:
+
+```bash
+python3 scripts/generate_servers_md.py --check
+python3 -m unittest discover -s tests -v
+```
 
 ## Required for acceptance
 

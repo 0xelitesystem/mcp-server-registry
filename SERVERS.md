@@ -3,23 +3,22 @@
 Auto-generated table from `servers/*.yaml`. To regenerate after adding entries:
 
 ```bash
-# Run scripts/generate_servers_md.py (community-contributed; see issues for status)
+python3 scripts/generate_servers_md.py
 ```
-
-(Until the generator script is contributed, this table is maintained manually as part of each PR.)
 
 | Server | Lang | Transport | Auth | Status | Categories |
 |---|---|---|---|---|---|
+| [Brave Search](servers/brave-search.yaml) | TypeScript | stdio | api-key | stable | search, web |
+| [Fetch](servers/fetch.yaml) | Python | stdio | none | stable | web, search |
 | [Filesystem](servers/filesystem.yaml) | TypeScript | stdio | none | stable | filesystem, development |
 | [GitHub](servers/github.yaml) | TypeScript | stdio | bearer-token | stable | version-control, development |
-| [Postgres](servers/postgres.yaml) | TypeScript | stdio | api-key | stable | database, data |
-| [SQLite](servers/sqlite.yaml) | Python | stdio | none | stable | database, data |
-| [Sequential Thinking](servers/sequential-thinking.yaml) | TypeScript | stdio | none | stable | reasoning, ai |
-| [Fetch](servers/fetch.yaml) | Python | stdio | none | stable | web, search |
-| [Brave Search](servers/brave-search.yaml) | TypeScript | stdio | api-key | stable | search, web |
 | [Memory](servers/memory.yaml) | TypeScript | stdio | none | stable | data, productivity |
-| [Time](servers/time.yaml) | Python | stdio | none | stable | productivity, other |
+| [Postgres](servers/postgres.yaml) | TypeScript | stdio | api-key | stable | database, data |
+| [Sequential Thinking](servers/sequential-thinking.yaml) | TypeScript | stdio | none | stable | reasoning, ai |
 | [Slack](servers/slack.yaml) | TypeScript | stdio | bearer-token | stable | communication, productivity |
+| [SQLite](servers/sqlite.yaml) | Python | stdio | none | stable | database, data |
+| [Time](servers/time.yaml) | Python | stdio | none | stable | productivity, other |
+| [Xquik](servers/xquik.yaml) | TypeScript | http | oauth | stable | search, web, data |
 
 ## Categories
 
