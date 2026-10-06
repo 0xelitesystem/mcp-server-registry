@@ -17,6 +17,7 @@ Auto-generated table from `servers/*.yaml`. To regenerate after adding entries:
 | [Sequential Thinking](servers/sequential-thinking.yaml) | TypeScript | stdio | none | stable | reasoning, ai |
 | [Fetch](servers/fetch.yaml) | Python | stdio | none | stable | web, search |
 | [Brave Search](servers/brave-search.yaml) | TypeScript | stdio | api-key | stable | search, web |
+| [Hyperconsciousness](servers/hyperconsciousness.yaml) | Rust | stdio | custom | alpha | database, search, productivity |
 | [Memory](servers/memory.yaml) | TypeScript | stdio | none | stable | data, productivity |
 | [Time](servers/time.yaml) | Python | stdio | none | stable | productivity, other |
 | [Slack](servers/slack.yaml) | TypeScript | stdio | bearer-token | stable | communication, productivity |

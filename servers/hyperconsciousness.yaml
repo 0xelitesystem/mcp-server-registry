@@ -1,0 +1,49 @@
+name: Hyperconsciousness
+slug: hyperconsciousness
+description: |
+  Developer-alpha Rust knowledge store for humans and agents. Stores encrypted,
+  signed append-only records, syncs them across devices, and provides scoped,
+  expiring access through MCP. Agents can search and read permitted records.
+repo: https://github.com/louis030195/hyperconsciousness
+maintainer: louis030195
+license: MIT
+language: rust
+transport: stdio
+auth: custom
+status: alpha
+tools_exposed:
+  - overview
+  - search
+  - recent
+  - record
+data_access:
+  - "Records in an explicitly selected local HC store, limited by the configured grant"
+install:
+  command: curl -fsSL https://raw.githubusercontent.com/louis030195/hyperconsciousness/main/install.sh | sh
+  notes: |
+    Tested v0.1.0-alpha.6 on macOS arm64 on 2026-10-06 using HC_INSTALL_DIR
+    to isolate the installation and HC_AUTO_UPDATE=0 to disable updates.
+    The documented installer supports macOS and Linux. By default it installs
+    to ~/.local/bin and enables automatic updates from GitHub releases.
+    Source installation is also documented in the repository README.
+    Initialize a separate store with hc start --dir /absolute/path/to/hc-store.
+    Create a scoped read grant for its device identity using the README's
+    "Give an agent limited access" instructions. Replace the grant and paths
+    below with your own values. No API key or hosted model is required.
+    No independent security audit is claimed. Grants filter server responses;
+    they do not sandbox a process with access to store files or keys. A hosted
+    model receiving a tool response can see its plaintext.
+config_example: |
+  {
+    "mcpServers": {
+      "hc": {
+        "command": "/absolute/path/to/hc",
+        "args": ["mcp", "--as", "<grant-id>", "--dir", "/absolute/path/to/hc-store"]
+      }
+    }
+  }
+categories:
+  - database
+  - search
+  - productivity
+last_verified: 2026-10-06
